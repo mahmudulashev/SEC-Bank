@@ -1,0 +1,8 @@
+# Mac ilova faqat lokal (GitHub'ga yuklanmaydi)
+macapp/
+dist/
+
+# lokal / vaqtinchalik
+voice-samples/
+audio/*.m4a
+.DS_Store

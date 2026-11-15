@@ -1,0 +1,79 @@
+{
+"3a": [
+ {"say": "Some information is **extra**. You can remove it, and the sentence still makes sense.", "t": [["Tom","s"],[",","ok"],["my friend","x","extra"],[",","ok"],["won","v"],["the race."]], "v": "ok"},
+ {"say": "Test it. Remove my friend: Tom won the race. Still a full sentence. So my friend is extra.", "t": [["Tom","s"],["won","v"],["the race."]], "v": "ok"},
+ {"say": "Extra information is wrapped with a **matching pair**: two commas, two dashes, or two parentheses.", "t": [["Tom"],["(","ok"],["my friend","x"],[")","ok"],["won the race."]], "v": "ok"},
+ {"say": "One comma is not enough. You opened the door, but you never closed it.", "t": [["Tom"],[",","ok"],["my friend","x"],["won the race."]], "v": "bad"},
+ {"say": "No mixing. A comma cannot close a dash, and a dash cannot close a comma.", "t": [["Tom"],[",","ok"],["my friend","x"],["—","bad"],["won the race."]], "v": "bad"},
+ {"say": "Parentheses close themselves. Do not add a comma after them here.", "t": [["Tom"],["(","ok"],["my friend","x"],[")","ok"],[",","bad"],["won the race."]], "v": "bad"},
+ {"say": "Extra information can be long. The rule does not change.", "t": [["The Registan","s"],[",","ok"],["a famous square in Samarkand","x","extra"],[",","ok"],["is","v"],["full of tourists."]], "v": "ok"},
+ {"say": "Here is a trap. The opening comma is far away. Look back to see how the extra part started.", "t": [["The scientist","s"],[",","ok"],["who had studied the volcano for twenty years","x"],["__","q"],["predicted","v"],["the eruption."]]},
+ {"say": "It opened with a comma, so it closes with a comma.", "t": [["The scientist","s"],[",","ok"],["who had studied the volcano for twenty years","x"],[",","ok"],["predicted","v"],["the eruption."]], "v": "ok"},
+ {"say": "Extra information can also start the sentence. Then you need only one comma, at the end of it.", "t": [["A talented painter","x","extra"],[",","ok"],["Frida Kahlo","s"],["used","v"],["bright colors."]], "v": "ok"},
+ {"say": "A real SAT sentence. A long extra phrase sits between two commas. Remove it, and the sentence still works.", "t": [["The Registan","s","subject"],[",","ok"],["the historic heart of Samarkand since the fifteenth century","x","extra"],[",","ok"],["is framed","v","verb"],["by three monumental madrasas."]], "v": "ok"},
+ {"say": "Summary: use the remove test. If the part is extra, wrap it with two matching marks.", "t": [[",","ok"],["extra","x"],[",","ok"]], "v": "ok"}
+],
+"3b": [
+ {"say": "When a job title comes **directly before** a name, use no commas.", "t": [["Biologist","g","title"],["Rachel Carson","s","name"],["wrote","v"],["Silent Spring."]], "v": "ok"},
+ {"say": "Putting commas around the name is wrong.", "t": [["Biologist"],[",","bad"],["Rachel Carson"],[",","bad"],["wrote Silent Spring."]], "v": "bad"},
+ {"say": "Why? Remove the name. Biologist wrote Silent Spring. Which biologist? We do not know. So the name is **essential**.", "t": [["Biologist","g"],["__","q"],["wrote Silent Spring."]], "v": "bad"},
+ {"say": "Essential information is never wrapped in commas.", "t": [["The author","s"],["Toni Morrison","g","essential"],["won","v"],["the prize."]], "v": "ok"},
+ {"say": "But when the name comes first and the description follows, the description is extra. Use two commas.", "t": [["Rachel Carson","s"],[",","ok"],["a biologist","x","extra"],[",","ok"],["wrote","v"],["Silent Spring."]], "v": "ok"},
+ {"say": "One comma alone is a common trap. Use both commas or none.", "t": [["Biologist"],["Rachel Carson","s"],[",","bad"],["wrote Silent Spring."]], "v": "bad"},
+ {"say": "The same rule works for any title: author, director, president, astronaut.", "t": [["Director","g","title"],["Greta Gerwig","s","name"],["made","v"],["the film."]], "v": "ok"},
+ {"say": "A real SAT sentence. Biochemist comes right before the name, so there are no commas.", "t": [["In a widely cited lecture,"],["biochemist Jennifer Doudna","s","title + name"],["described","v","verb"],["how a bacterial defense system could become a gene-editing tool."]], "v": "ok"},
+ {"say": "Summary: title, then name, no commas. Name, then description, two commas.", "t": [["title name","g"],["vs"],["name, description,","x"]]}
+],
+"3c": [
+ {"say": "That and which both describe a noun, but they work differently.", "t": [["that","g","essential"],["which","x","extra"]]},
+ {"say": "That tells you **which one**. It is essential, so it takes no commas.", "t": [["The bike","s"],["that my grandfather built","g","essential"],["still works","v"],["."]], "v": "ok"},
+ {"say": "Commas around a that clause are wrong.", "t": [["The bike"],[",","bad"],["that my grandfather built"],[",","bad"],["still works."]], "v": "bad"},
+ {"say": "Which adds **extra** information. Wrap it with two commas.", "t": [["The Amu Darya","s"],[",","ok"],["which flows west","x","extra"],[",","ok"],["is","v"],["long."]], "v": "ok"},
+ {"say": "Without the commas, a which clause looks wrong on the SAT.", "t": [["The Amu Darya","s"],["which flows west","x"],["is","v"],["long."]], "v": "bad"},
+ {"say": "After a proper name, the clause is almost always extra. The name already tells us which one.", "t": [["Samarkand","s","name"],[",","ok"],["which is very old","x"],[",","ok"],["attracts","v"],["tourists."]], "v": "ok"},
+ {"say": "Who works the same way for people. An essential who clause takes no commas.", "t": [["Students","s"],["who study daily","g","essential"],["improve","v"],["fast."]], "v": "ok"},
+ {"say": "An extra who clause takes two commas.", "t": [["My grandmother","s"],[",","ok"],["who grew up in Bukhara","x","extra"],[",","ok"],["speaks","v"],["three languages."]], "v": "ok"},
+ {"say": "Do not forget the closing comma. Without it, the extra part never ends.", "t": [["The observatory"],[",","ok"],["which was built in the 1420s","x","not closed"],["housed"],["a huge instrument."]], "v": "bad"},
+ {"say": "A real SAT sentence. After the name comes comma, which, comma, and then the main verb.", "t": [["The Ulugh Beg Observatory","s","subject"],[",","ok"],["which was built in Samarkand in the 1420s","x","extra"],[",","ok"],["housed","v","verb"],["an enormous instrument for measuring stars."]], "v": "ok"},
+ {"say": "Summary: that is essential, no commas. Which is extra, two commas.", "t": [["that","g"],["no commas"],["·"],["which","x"],["two commas"]]}
+],
+"3d": [
+ {"say": "Sometimes the right answer is **no punctuation at all**. Let us see where.", "t": [["no punctuation","g"]]},
+ {"say": "Never put a comma between a subject and its verb.", "t": [["The students","s","subject"],["passed","v","verb"],["the test."]], "v": "ok"},
+ {"say": "Even when the subject is very long. This is the most common trap on the test.", "t": [["The number of students who joined the club","s","subject"],[",","bad"],["surprised","v","verb"],["everyone."]], "v": "bad"},
+ {"say": "Find the main verb. Everything before it is the subject. No comma between them.", "t": [["The number of students who joined the club","s","subject"],["surprised","v","verb"],["everyone."]], "v": "ok"},
+ {"say": "No comma between a verb and its object.", "t": [["She","s"],["bought","v","verb"],[",","bad"],["three books","g","object"],["."]], "v": "bad"},
+ {"say": "No comma between a preposition and its object.", "t": [["The book is about"],[",","bad"],["ancient Rome","g"],["."]], "v": "bad"},
+ {"say": "No comma between said, showed, or found and the word that.", "t": [["She said","m"],[",","bad"],["that it worked."]], "v": "bad"},
+ {"say": "Correct: she said that it worked. No marks needed.", "t": [["She said"],["that it worked","g"],["."]], "v": "ok"},
+ {"say": "But be careful. Between two complete sentences, no punctuation is a run-on.", "t": [["It rained","m","complete"],["we left","m","complete"],["."]], "v": "bad"},
+ {"say": "A real SAT sentence. The subject is fourteen words long, but there is no mark between it and the verb.", "t": [["The large number of students who signed up for the robotics club last spring","s","subject"],["convinced","v","verb"],["the school to open a second class."]], "v": "ok"},
+ {"say": "Summary: keep subject and verb together, verb and object together, preposition and object together.", "t": [["subject","s"],["verb","v"],["object","g"]], "v": "ok"}
+],
+"4a": [
+ {"say": "The verb must match its subject. A singular subject takes a singular verb.", "t": [["The list","s","singular"],["is","g"],["long."]], "v": "ok"},
+ {"say": "A plural subject takes a plural verb.", "t": [["The lists","s","plural"],["are","g"],["long."]], "v": "ok"},
+ {"say": "Here is the trap. A phrase with of comes between them. Names is not the subject.", "t": [["The list","s","subject"],["of names","x","cross out"],["are","w"],["long."]], "v": "bad"},
+ {"say": "Cross out the of phrase and read again: the list is long.", "t": [["The list","s","subject"],["of names","x"],["is","g"],["long."]], "v": "ok"},
+ {"say": "Do the same with that, who, and which clauses. Cross them out.", "t": [["The paintings","s","plural"],["that she made in Paris","x","cross out"],["feature","g"],["bright colors."]], "v": "ok"},
+ {"say": "And with phrases that start with in, on, or with.", "t": [["The box","s","singular"],["with the old coins","x","cross out"],["is","g"],["heavy."]], "v": "ok"},
+ {"say": "Singular verbs: is, was, has, and verbs that end in s, like includes.", "t": [["is","g"],["was","g"],["has","g"],["includes","g"]]},
+ {"say": "Plural verbs: are, were, have, and verbs without s, like include.", "t": [["are","g"],["were","g"],["have","g"],["include","g"]]},
+ {"say": "A wrong version: include matches manuscripts, but the real subject is collection.", "t": [["The collection","s","subject"],["of manuscripts","x"],["include","w"],["4,000 documents."]], "v": "bad"},
+ {"say": "A real SAT sentence. The real subject is collection, which is singular. Cross out everything in the middle.", "t": [["The collection","s","subject"],["of ancient manuscripts stored in the library’s basement","x","cross out"],["includes","g"],["more than 4,000 documents."]], "v": "ok"},
+ {"say": "Summary: find the subject, cross out the middle, then match the verb.", "t": [["subject","s"],["middle","x"],["verb","g"]], "v": "ok"}
+],
+"4b": [
+ {"say": "Some subjects are tricky. Group nouns like team, group, and committee are **singular**.", "t": [["The team","s","singular"],["is","g"],["ready."]], "v": "ok"},
+ {"say": "Each, every, either, and neither are singular too.", "t": [["Each","s","singular"],["of the students","x"],["was","g"],["ready."]], "v": "ok"},
+ {"say": "Two subjects joined by and are plural.", "t": [["The coach and the captain","s","plural"],["agree","g"],["."]], "v": "ok"},
+ {"say": "With either or, and neither nor, look at the subject that is **closer** to the verb.", "t": [["Neither the coach nor"],["the players","s","closer"],["were","g"],["happy."]], "v": "ok"},
+ {"say": "Flip the order, and the verb flips too.", "t": [["Neither the players nor"],["the coach","s","closer"],["was","g"],["happy."]], "v": "ok"},
+ {"say": "With there is and there are, the subject comes **after** the verb.", "t": [["There"],["are","g"],["two reasons","s","subject"],["."]], "v": "ok"},
+ {"say": "So there is with a plural subject is wrong.", "t": [["There"],["is","w"],["two reasons","s","plural"],["."]], "v": "bad"},
+ {"say": "In inverted sentences the subject is at the end. Look past the verb to find it.", "t": [["Among the winners"],["was","g"],["one student","s","subject"],["."]], "v": "ok"},
+ {"say": "Phrases like along with and as well as do not make the subject plural.", "t": [["The teacher","s","singular"],[", along with her students,","x"],["is","g"],["here."]], "v": "ok"},
+ {"say": "A real SAT sentence. The sentence is inverted. The subject, the fact, comes after the verb, and it is singular.", "t": [["Among the most surprising findings of the survey"],["was","g"],["the fact","s","subject"],["that most participants preferred printed books."]], "v": "ok"},
+ {"say": "Summary: group nouns and each are singular. A and B is plural. Either or follows the closer subject. With there and inverted sentences, look after the verb.", "t": [["team: is","g"],["A and B: are","g"],["there are: look after","g"]]}
+]
+}

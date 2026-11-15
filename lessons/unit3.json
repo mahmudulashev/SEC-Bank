@@ -1,0 +1,70 @@
+{
+"5a": [
+ {"say": "A **pronoun** replaces a noun. It must match that noun in number: one or many.", "t": [["The company","s","singular"],["raised"],["its","g"],["prices."]], "v": "ok"},
+ {"say": "A company is one thing, so their is wrong.", "t": [["The company","s","singular"],["raised"],["their","w"],["prices."]], "v": "bad"},
+ {"say": "Plural nouns take they and their.", "t": [["The students","s","plural"],["opened"],["their","g"],["books."]], "v": "ok"},
+ {"say": "These nouns are singular and take it and its: company, team, city, country, government, study.", "t": [["company","g"],["team","g"],["city","g"],["country","g"],["government","g"],["study","g"]]},
+ {"say": "Always find what the pronoun refers to first, then check the number.", "t": [["Sea turtles","s","plural"],["return home;"],["they","g"],["sense magnetic fields."]], "v": "ok"},
+ {"say": "Trap: a plural noun sits closer to the pronoun. Do not be fooled. The museum opened its doors.", "t": [["The museum","s","singular"],["with ancient coins","x"],["opened"],["its","g"],["doors."]], "v": "ok"},
+ {"say": "Here their matches coins, but coins did not open anything. Wrong.", "t": [["The museum","s"],["with ancient coins","x"],["opened"],["their","w"],["doors."]], "v": "bad"},
+ {"say": "The pronoun must also be clear. If she could mean Maria or Ana, the SAT wants the name instead.", "t": [["Maria told Ana that"],["she","w","who?"],["had won."]], "v": "bad"},
+ {"say": "A real SAT sentence. The pronoun refers to the company, which is singular, so it is correct.", "t": [["After a decade of rapid growth,"],["the company","s","singular"],["announced that"],["it","g"],["would open three new factories in Uzbekistan."]], "v": "ok"},
+ {"say": "Summary: find the noun, count it, then choose it or they.", "t": [["one: it, its","g"],["many: they, their","g"]]}
+],
+"5b": [
+ {"say": "These words sound the same but mean different things. First: **its** means belonging to it.", "t": [["The city is famous for"],["its","g","belongs to it"],["architecture."]], "v": "ok"},
+ {"say": "It's means it is. Test it: replace it and read. The city is famous for it is architecture? No.", "t": [["The city is famous for"],["it is","w"],["architecture."]], "v": "bad"},
+ {"say": "When it is makes sense, use it's.", "t": [["It’s","g","it is"],["raining."]], "v": "ok"},
+ {"say": "Their means belonging to them.", "t": [["The students opened"],["their","g","belongs to them"],["books."]], "v": "ok"},
+ {"say": "They're means they are.", "t": [["They’re","g","they are"],["planning to apply."]], "v": "ok"},
+ {"say": "There means a place, or it starts there is and there are.", "t": [["There","g","place"],["is a café near the park."]], "v": "ok"},
+ {"say": "Whose shows ownership.", "t": [["Whose","g","owner"],["book is this?"]], "v": "ok"},
+ {"say": "Who's means who is.", "t": [["Who’s","g","who is"],["coming tonight?"]], "v": "ok"},
+ {"say": "Possessive pronouns never take an apostrophe: its, theirs, yours, hers.", "t": [["its","g"],["theirs","g"],["yours","g"],["hers","g"]]},
+ {"say": "A real SAT sentence. The size belongs to the panda. Try it is: it does not make sense, so the answer is its.", "t": [["The giant panda eats for up to fourteen hours a day, since bamboo provides little energy for an animal of"],["its","g","belongs to it"],["size."]], "v": "ok"},
+ {"say": "Summary: read the long form out loud. If it is, they are, or who is fits, use the apostrophe. If not, do not.", "t": [["it’s = it is","g"],["they’re = they are","g"],["who’s = who is","g"]]}
+],
+"5c": [
+ {"say": "A simple plural needs no apostrophe. Two students passed.", "t": [["Two"],["students","g","plural"],["passed."]], "v": "ok"},
+ {"say": "One owner: add **apostrophe s**.", "t": [["One"],["student’s","g","one owner"],["book","s","owned thing"],["is here."]], "v": "ok"},
+ {"say": "Many owners: add the apostrophe **after** the s.", "t": [["Three"],["students’","g","many owners"],["books","s","owned thing"],["are here."]], "v": "ok"},
+ {"say": "Plurals that do not end in s, like children, add apostrophe s.", "t": [["The"],["children’s","g","many owners"],["toys","s","owned thing"],["are new."]], "v": "ok"},
+ {"say": "Test: a possessive word must be followed by the thing it owns. Here nothing follows, so no apostrophe.", "t": [["Two"],["student’s","w"],["passed."]], "v": "bad"},
+ {"say": "Count the owners. One scientist's report. Many scientists' reports.", "t": [["one scientist’s report","g"],["many scientists’ reports","g"]]},
+ {"say": "A real SAT sentence. Three shows many scientists, and the reports belong to them.", "t": [["The three"],["scientists’","g","many owners"],["reports","s","owned thing"],[", published over a decade, show a steady rise in temperature."]], "v": "ok"},
+ {"say": "Summary: no owner, no apostrophe. One owner, apostrophe s. Many owners ending in s, s apostrophe.", "t": [["students","g"],["student’s","g"],["students’","g"]]}
+],
+"6a": [
+ {"say": "Verb tense is decided by **time words** and by the other verbs in the passage.", "t": [["In 1969,","d","finished time"],["Apollo 11"],["landed","g"],["on the Moon."]], "v": "ok"},
+ {"say": "Since means the action started in the past and continues now. Use has or have plus the past participle.", "t": [["Since 2015,","d","until now"],["the city"],["has built","g"],["500 kilometers of bike lanes."]], "v": "ok"},
+ {"say": "With since, the simple past is wrong.", "t": [["Since 2015,","d"],["the city"],["built","w"],["500 kilometers of bike lanes."]], "v": "bad"},
+ {"say": "By the time means one past action finished before another. Use had plus the past participle.", "t": [["By the time help arrived,","d","later event"],["they"],["had waited","g"],["two days."]], "v": "ok"},
+ {"say": "Today and currently point to the present.", "t": [["Today,","d","now"],["the city"],["uses","g"],["solar power."]], "v": "ok"},
+ {"say": "No time words? Match the other verbs in the sentence.", "t": [["The team"],["collected","g","past"],["samples and"],["analyzed","g","past"],["them."]], "v": "ok"},
+ {"say": "Switching tense in the middle is wrong.", "t": [["The team collected samples and"],["analyzes","w"],["them."]], "v": "bad"},
+ {"say": "A real SAT sentence. The waiting happened before the rescue team arrived, so we use had waited.", "t": [["By the time the rescue team finally reached the mountain camp,","d","later event"],["the hikers"],["had waited","g"],["nearly two days without food."]], "v": "ok"},
+ {"say": "Summary: look for time words first. If there are none, match the other verbs.", "t": [["in 1969: landed","g"],["since: has built","g"],["by the time: had waited","g"]]}
+],
+"6b": [
+ {"say": "Every sentence needs one **real verb**, a verb that can stand alone with its subject.", "t": [["The city","s","subject"],["attracts","v","real verb"],["tourists."]], "v": "ok"},
+ {"say": "An i n g form cannot be the main verb by itself.", "t": [["The city","s"],["attracting","w"],["tourists."]], "v": "bad"},
+ {"say": "To plus a verb cannot be the main verb either.", "t": [["The city","s"],["to attract","w"],["tourists."]], "v": "bad"},
+ {"say": "Neither can having plus a past participle.", "t": [["The city","s"],["having built","w"],["new roads."]], "v": "bad"},
+ {"say": "Extra information in the middle can distract you. Where is the verb?", "t": [["The city","s","subject"],[",","ok"],["with its clay walls","x"],[",","ok"],["attracting","w"],["tourists."]], "v": "bad"},
+ {"say": "Find the subject, skip the extra part, and make sure a real verb follows.", "t": [["The city","s","subject"],[",","ok"],["with its clay walls","x"],[",","ok"],["attracts","v","real verb"],["tourists."]], "v": "ok"},
+ {"say": "Watch out for which and that. They can turn the verb into a description and leave the sentence without a main verb.", "t": [["The city","s"],["which attracts tourists","x"],["."]], "v": "bad"},
+ {"say": "A real SAT sentence. After the extra part between the commas, the real verb attracts must come.", "t": [["The ancient city of Khiva","s","subject"],[",","ok"],["with its massive clay walls and turquoise-tiled minarets","x"],[",","ok"],["attracts","v","real verb"],["thousands of tourists every year."]], "v": "ok"},
+ {"say": "Summary: subject plus a real verb. Not i n g alone, not to plus verb, not having plus participle.", "t": [["subject","s"],["real verb","v"]], "v": "ok"}
+],
+"6c": [
+ {"say": "Look at the opening phrase. It describes someone. But who?", "t": [["Born in Andijan,","d","who was born?"],["__","q"]]},
+ {"say": "The person it describes must come **right after** the comma.", "t": [["Born in Andijan,","d"],["Babur","s","he was born"],["founded an empire."]], "v": "ok"},
+ {"say": "Otherwise the sentence says the empire was born in Andijan. That is a **dangling modifier**.", "t": [["Born in Andijan,","d"],["the empire","w"],["was founded by Babur."]], "v": "bad"},
+ {"say": "Ask the question: who was walking home? I was. So I comes right after the comma.", "t": [["Walking home,","d","who walked?"],["I","s"],["saw the domes."]], "v": "ok"},
+ {"say": "Here the domes seem to be walking home. Wrong.", "t": [["Walking home,","d"],["the domes","w"],["were seen."]], "v": "bad"},
+ {"say": "The same with phrases like known for. What is known for its tiles? The mosque.", "t": [["Known for its tiles,","d","what is known?"],["the mosque","s"],["draws visitors."]], "v": "ok"},
+ {"say": "Trap: a possessive. Babur's empire puts the empire first, and the empire was not born in Andijan.", "t": [["Born in Andijan,","d"],["Babur’s empire","w"],["grew fast."]], "v": "bad"},
+ {"say": "A real SAT sentence. The long opening describes Babur, and Babur comes right after the comma.", "t": [["Born in Andijan in 1483 and forced to leave his homeland young,","d","who?"],["Babur","s","he"],["founded","v"],["the Mughal Empire in South Asia."]], "v": "ok"},
+ {"say": "Summary: read the first word after the comma. It must be the one doing the action in the opening phrase.", "t": [["opening phrase,","d"],["the doer","s"]], "v": "ok"}
+]
+}
