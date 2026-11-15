@@ -11,6 +11,7 @@
   --bg:#F5F6F8; --panel:#FFFFFF; --sunk:#EEF0F4; --ink:#171C2B; --soft:#3F4659; --muted:#5D6578; --line:#E1E4EA; --line2:#CDD2DC;
   --blue:#2B59E0; --blue-h:#2149BF; --blue-t:#E8EEFD; --ok:#13875A; --ok-t:#E3F4EC; --bad:#C9373C; --bad-t:#FCE9EA; --hl:#F2C230;
   --e-bg:#E3F4EC; --e-fg:#0E6B47; --m-bg:#FBF0D2; --m-fg:#7A5300; --h-bg:#FBE4E5; --h-fg:#A3262B;
+  --e-tile:#C9EDD7; --m-tile:#FBE3A0; --h-tile:#F8CACD;
   --lock:#EEF0F4; --lock-fg:#7D8496; --board:#151B2C; --chalk:#F1F3F8;
   --sh:0 1px 2px rgba(20,28,45,.06),0 1px 1px rgba(20,28,45,.04);
   --sh-lg:0 12px 40px rgba(15,22,40,.18);
@@ -21,6 +22,7 @@
   --bg:#12151D; --panel:#1A1E29; --sunk:#151923; --ink:#E8EBF2; --soft:#C3C8D4; --muted:#9AA1B2; --line:#2A3040; --line2:#394054;
   --blue:#7B9BFF; --blue-h:#97B0FF; --blue-t:#1F2A4A; --ok:#45C98F; --ok-t:#14301F; --bad:#F2777B; --bad-t:#3A1A1C; --hl:#F2C230;
   --e-bg:#14301F; --e-fg:#7FDDB0; --m-bg:#382B0C; --m-fg:#F4CD6A; --h-bg:#3A1A1C; --h-fg:#FF9EA2;
+  --e-tile:#1A4A31; --m-tile:#4E3C10; --h-tile:#552328;
   --lock:#1A1E29; --lock-fg:#6E7588; --board:#0D1018; --sh:none; --sh-lg:0 12px 40px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
@@ -64,7 +66,7 @@ aside{position:sticky;top:0;height:100vh;overflow:auto;padding:24px 16px;border-
 .side-foot button:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 
 /* ---------- main ---------- */
-main{padding:32px 44px 90px;max-width:1040px}
+main{padding:32px 44px 90px;max-width:1040px;width:100%;margin:0 auto;box-sizing:border-box}
 .view{animation:viewIn .25s ease both}
 @keyframes viewIn{from{opacity:0}to{opacity:1}}
 .hero{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--sh)}
@@ -102,12 +104,13 @@ main{padding:32px 44px 90px;max-width:1040px}
 .tile{position:relative;width:46px;height:46px;border:1px solid var(--line2);border-radius:9px;font-weight:500;font-size:15px;display:grid;place-items:center;font-variant-numeric:tabular-nums;transition:border-color .12s,background .12s}
 .tile:hover{border-color:var(--blue)}
 .tile.blind{background:var(--panel);color:var(--ink)}
-.tile.Easy{background:var(--e-bg);color:var(--e-fg);border-color:transparent}.tile.Medium{background:var(--m-bg);color:var(--m-fg);border-color:transparent}.tile.Hard{background:var(--h-bg);color:var(--h-fg);border-color:transparent}
+.tile.Easy{background:var(--e-tile);color:var(--e-fg);border-color:transparent}.tile.Medium{background:var(--m-tile);color:var(--m-fg);border-color:transparent}.tile.Hard{background:var(--h-tile);color:var(--h-fg);border-color:transparent}
+.tile.Easy:hover,.tile.Medium:hover,.tile.Hard:hover{border-color:currentColor}
 .tile .bdg{position:absolute;top:-5px;right:-5px;width:16px;height:16px;border-radius:50%;border:2px solid var(--bg);display:grid;place-items:center;font-size:9px;font-weight:700;color:#fff}
 .tile .bdg.ok{background:var(--ok)}.tile .bdg.bad{background:var(--bad)}
 .tile .pr{position:absolute;bottom:4px;left:50%;margin-left:-2px;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55}
-.tile[disabled]{background:transparent;color:var(--lock-fg);border:1px dashed var(--line2);cursor:not-allowed}
-.tile[disabled]:hover{border-color:var(--line2)}
+.tile[disabled]{opacity:.38;cursor:not-allowed}
+.tile[disabled]:hover{border-color:transparent}
 .unit{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:36px 0 0;padding:0 0 14px;border-bottom:2px solid var(--ink)}
 .unit .uk{font-size:13.5px;color:var(--muted)}
 .unit h2{margin:2px 0;font-size:21px;font-weight:650;letter-spacing:-.01em}
@@ -608,7 +611,7 @@ function renderBank(){
     else { hh=`${t.code} to‘plamini 80% ga yetkazing`; hp="Xato qilingan savollarni qayta ishlang."; hb="Xatolarni ishlash"; } }
   else { hk="Hamma to‘plamlar o‘tildi"; hh="Mock: 40 savol, 47 daqiqa"; hp="Imtihon sharoitida o‘zingizni sinab ko‘ring."; hb="Mockka o‘tish"; }
   let h=`<div class="view"><div class="hero"><div><div class="k">${hk}</div><h1>${esc(hh)}</h1><p>${hp}</p></div><button class="btn go" id="cta">${hb}</button></div>
-    <div class="legend"><span><i style="background:var(--e-bg)"></i>Oson</span><span><i style="background:var(--m-bg)"></i>O‘rta</span><span><i style="background:var(--h-bg)"></i>Qiyin</span><span>Qiyinlik javobdan keyin ko‘rinadi. Kichik nuqta: mashq savoli.</span></div>`;
+    <div class="legend"><span><i style="background:var(--e-tile)"></i>Oson</span><span><i style="background:var(--m-tile)"></i>O‘rta</span><span><i style="background:var(--h-tile)"></i>Qiyin</span><span>Kichik nuqta: mashq savoli.</span></div>`;
   let lastDay=0;
   T.forEach((t,i)=>{
     if(t.day!==lastDay){ if(lastDay)h+=`</section>`; lastDay=t.day;
@@ -619,7 +622,7 @@ function renderBank(){
     const s=tstat(t), open=unlocked(i), fresh=justPassed!==null&&i===justPassed+1;
     const tiles=t.items.map((it,j)=>{ const r=S.q[it.key];
       const b=r?`<span class="bdg ${r.last?'ok':'bad'} ">${r.last?'✓':'✗'}</span>`:"";
-      return `<button class="tile ${r?it.diff:'blind'}" style="--i:${j}" ${open?'':'disabled'} data-t="${i}" data-j="${j}" aria-label="${it.label}${r?', '+it.diff:''}">${j+1}${b}${r&&it.src==='practice'?'<span class="pr"></span>':''}</button>`; }).join("");
+      return `<button class="tile ${it.diff}" style="--i:${j}" ${open?'':'disabled'} data-t="${i}" data-j="${j}" aria-label="${it.label}, ${it.diff}">${j+1}${b}${r&&it.src==='practice'?'<span class="pr"></span>':''}</button>`; }).join("");
     h+=`<div class="row ${fresh?'fresh':''}"><div class="rlab"><div class="t">${t.code}${t.kind==='test'?' · Mavzu testi':''}</div>
       <div class="st"><strong>${s.done}/${s.n}</strong> ishlangan · ${s.last} to‘g‘ri${s.passed?`<span class="stamp">O‘tdi</span>`:''}</div>
       
